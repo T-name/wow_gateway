@@ -1,7 +1,11 @@
 进步GM网关
 ===
 开过服的都知道，游戏管理是一个头疼的事情，于是本人开发了一个方便GM管理游戏的工具网关。
+
 本程序仅用于学习交流！！！请勿用于非法用途！！！
+
+有喜欢的朋友可以点下小星星哈！！！！
+
 
 **简介**：
     
@@ -39,9 +43,6 @@
 ![8.png](img%2F8.png)
 ![9.png](img%2F9.png)
 
-具体的使用方法可以观看视频：
-
-<video src="https://raw.githubusercontent.com/T-name/wow_gateway/master/img/1.mp4"></video>
 
 服务注册地址：http://wow.t-name.cfd/mobile/
 
