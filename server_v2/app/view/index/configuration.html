@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>网关初始化设置</title>
+    <meta charset="UTF-8">
+    <!-- import CSS -->
+    <link rel="stylesheet" href="/static/css/theme-chalk.css">
+    <style>
+        [v-cloak] {
+            display: none !important;
+        }
+        /* 新增的样式 */
+        .fixed-footer {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            text-align: center;
+            padding: 10px 0; /* 可根据需要调整上下内边距 */
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+<div id="app" v-cloak >
+
+    <el-card class="box-card" style="margin-bottom: 10px">
+        安装向导
+    </el-card>
+
+    <el-card v-loading.fullscreen.lock="loading"  >
+        <el-form ref="form" :model="form" :rules="rules"  label-width="120px">
+
+            <el-card class="box-card">
+                <div slot="header" class="clearfix">
+                    <span>通讯密钥  <span style="color:red;">务必妥善保管</span></span>
+                </div>
+                <div>
+                    <el-form-item label="通讯密钥" prop="app_token">
+                        <el-input v-model="form.app_token" placeholder="用于与服务端通讯 务必妥善保管"></el-input>
+                    </el-form-item>
+                </div>
+            </el-card>
+
+            <el-card class="box-card" style="margin-top: 10px">
+                <div slot="header" class="clearfix">
+                    <span>auth(账号)库设置</span>
+                </div>
+                <div>
+                    <el-form-item label="数据库地址" prop="auth_hostname">
+                        <el-input v-model="form.auth_hostname"></el-input>
+                    </el-form-item>
+                    <el-form-item label="数据库端口" prop="auth_port">
+                        <el-input v-model="form.auth_port" type="number"></el-input>
+                    </el-form-item>
+                    <el-form-item label="数据库账号" prop="auth_username">
+                        <el-input v-model="form.auth_username"></el-input>
+                    </el-form-item>
+                    <el-form-item label="数据库密码" prop="auth_password">
+                        <el-input v-model="form.auth_password"></el-input>
+                    </el-form-item>
+                    <el-form-item label="数据库名" prop="auth_database">
+                        <el-input v-model="form.auth_database"></el-input>
+                    </el-form-item>
+                </div>
+            </el-card>
+            <el-card class="box-card" style="margin-top: 10px">
+                <div slot="header" class="clearfix">
+                    <span>characters(角色)库设置</span>
+                </div>
+                <div>
+                    <el-form-item label="数据库地址" prop="characters_hostname">
+                        <el-input v-model="form.characters_hostname"></el-input>
+                    </el-form-item>
+                    <el-form-item label="数据库端口" prop="characters_port">
+                        <el-input v-model="form.characters_port" type="number"></el-input>
+                    </el-form-item>
+                    <el-form-item label="数据库账号" prop="characters_username">
+                        <el-input v-model="form.characters_username"></el-input>
+                    </el-form-item>
+                    <el-form-item label="数据库密码" prop="characters_password">
+                        <el-input v-model="form.characters_password"></el-input>
+                    </el-form-item>
+                    <el-form-item label="数据库名" prop="characters_database">
+                        <el-input v-model="form.characters_database"></el-input>
+                    </el-form-item>
+                </div>
+            </el-card>
+            <el-card class="box-card" style="margin-top: 10px">
+                <div slot="header" class="clearfix">
+                    <span>world(世界)库设置</span>
+                </div>
+                <div>
+                    <el-form-item label="数据库地址" prop="world_hostname">
+                        <el-input v-model="form.world_hostname"></el-input>
+                    </el-form-item>
+                    <el-form-item label="数据库端口" prop="world_port">
+                        <el-input v-model="form.world_port" type="number"></el-input>
+                    </el-form-item>
+                    <el-form-item label="数据库账号" prop="world_username">
+                        <el-input v-model="form.world_username"></el-input>
+                    </el-form-item>
+                    <el-form-item label="数据库密码" prop="world_password">
+                        <el-input v-model="form.world_password"></el-input>
+                    </el-form-item>
+                    <el-form-item label="数据库名" prop="world_database">
+                        <el-input v-model="form.world_database"></el-input>
+                    </el-form-item>
+                </div>
+            </el-card>
+            <el-card class="box-card" style="margin-top: 10px;">
+                <div slot="header" class="clearfix">
+                    <span>soap设置 <span style="color: red">请确保soap服务正常开启</span></span>
+                </div>
+                <div>
+                    <el-form-item label="soap服务状态" prop="soap_hostname">
+                        <el-radio-group v-model="form.soap_is_open">
+                            <el-radio :label="1">已经开启</el-radio>
+                            <el-radio :label="2">稍后开启</el-radio>
+                        </el-radio-group>
+                    </el-form-item>
+
+                    <el-form-item label="soap地址" prop="soap_hostname">
+                        <el-input v-model="form.soap_hostname"></el-input>
+                    </el-form-item>
+                    <el-form-item label="soap端口" prop="soap_port">
+                        <el-input v-model="form.soap_port" type="number"></el-input>
+                    </el-form-item>
+                    <el-form-item label="GM账号" prop="soap_username">
+                        <el-input v-model="form.soap_username" placeholder="若账号不存在或非GM账号 则自动新增或设置"></el-input>
+                    </el-form-item>
+                    <el-form-item label="GM密码" prop="soap_password">
+                        <el-input v-model="form.soap_password"></el-input>
+                    </el-form-item>
+                </div>
+            </el-card>
+
+<!--            <el-card class="box-card" style="margin-top: 10px;margin-bottom: 100px">-->
+<!--                <div slot="header" class="clearfix">-->
+<!--                    <span>其他配置 <span style="color: red">可增加更丰富的功能</span></span>-->
+<!--                </div>-->
+<!--                <div>-->
+<!--                    <el-form-item label-width="200px" label="lua脚本目录" prop="wow_laupath">-->
+<!--                        <el-input v-model="form.soap_hostname"></el-input>-->
+<!--                    </el-form-item>-->
+<!--                    <el-form-item label-width="200px" label="authserver配置文件路径" prop="soap_port">-->
+<!--                        <el-input v-model="form.soap_port" type="number"></el-input>-->
+<!--                    </el-form-item>-->
+<!--                    <el-form-item label-width="200px" label="worldserver配置文件路径" prop="soap_username">-->
+<!--                        <el-input v-model="form.soap_username" placeholder="若账号不存在或非GM账号 则自动新增或设置"></el-input>-->
+<!--                    </el-form-item>-->
+<!--                </div>-->
+<!--            </el-card>-->
+
+            <el-form-item class="fixed-footer">
+                <el-button type="primary" @click="onSubmit">全部保存</el-button>
+            </el-form-item>
+
+        </el-form>
+    </el-card>
+
+</div>
+</body>
+<!-- import Vue before Element -->
+<script src="/static/js/vue.js"></script>
+<!-- import JavaScript -->
+<script src="/static/js/element-ui.js"></script>
+<script src="/static/js/axios.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                loading: false,
+                form: {
+                    //通讯密钥
+                    app_token: '12345678',
+                    app_ip:'',
+
+                    // auth库设置
+                    auth_hostname: 'localhost',
+                    auth_port: 3306,
+                    auth_username: 'root',
+                    auth_password: '123456',
+                    auth_database: 'acore_auth',
+
+                    // characters库设置
+                    characters_hostname: 'localhost',
+                    characters_port: 3306,
+                    characters_username: 'root',
+                    characters_password: '123456',
+                    characters_database: 'acore_characters',
+
+                    // world库设置
+                    world_hostname: 'localhost',
+                    world_port: 3306,
+                    world_username: 'root',
+                    world_password: '123456',
+                    world_database: 'acore_world',
+
+                    // soap设置
+                    soap_is_open: 1,
+                    soap_hostname: 'localhost',
+                    soap_port: 7878,
+                    soap_username: '1',
+                    soap_password: '1',
+                },
+                rules: {
+                    app_token: [
+                        { required: true, message: '请输入通讯密钥', trigger: 'blur' },
+                        { min: 6, max: 18, message: '长度在 6 到 18 个字符', trigger: 'blur' }
+                    ],
+                    auth_hostname: [
+                        { required: true, message: '请输入auth库数据库地址', trigger: 'blur' }
+                    ],
+                    auth_port: [
+                        { required: true, message: '请输入auth库数据库端口', trigger: 'blur' },
+                    ],
+                    auth_username: [
+                        { required: true, message: '请输入auth库数据库账号', trigger: 'blur' }
+                    ],
+                    auth_password: [
+                        { required: true, message: '请输入auth库数据库密码', trigger: 'blur' }
+                    ],
+                    auth_database: [
+                        { required: true, message: '请输入auth库数据库名', trigger: 'blur' }
+                    ],
+                    characters_hostname: [
+                        { required: true, message: '请输入characters库数据库地址', trigger: 'blur' }
+                    ],
+                    characters_port: [
+                        { required: true, message: '请输入characters库数据库端口', trigger: 'blur' },
+                    ],
+                    characters_username: [
+                        { required: true, message: '请输入characters库数据库账号', trigger: 'blur' }
+                    ],
+                    characters_password: [
+                        { required: true, message: '请输入characters库数据库密码', trigger: 'blur' }
+                    ],
+                    characters_database: [
+                        { required: true, message: '请输入characters库数据库名', trigger: 'blur' }
+                    ],
+                    world_hostname: [
+                        { required: true, message: '请输入world库数据库地址', trigger: 'blur' }
+                    ],
+                    world_port: [
+                        { required: true, message: '请输入world库数据库端口', trigger: 'blur' },
+                    ],
+                    world_username: [
+                        { required: true, message: '请输入world库数据库账号', trigger: 'blur' }
+                    ],
+                    world_password: [
+                        { required: true, message: '请输入world库数据库密码', trigger: 'blur' }
+                    ],
+                    world_database: [
+                        { required: true, message: '请输入world库数据库名', trigger: 'blur' }
+                    ],
+                    soap_is_open: [
+                        { required: true, message: 'soap服务是否已开启', trigger: 'blur' }
+                    ],
+                    soap_hostname: [
+                        { required: true, message: '请输入soap地址', trigger: 'blur' }
+                    ],
+                    soap_port: [
+                        { required: true, message: '请输入soap端口', trigger: 'blur' },
+                    ],
+                    soap_username: [
+                        { required: true, message: '请输入GM账号', trigger: 'blur' }
+                    ],
+                    soap_password: [
+                        { required: true, message: '请输入GM密码', trigger: 'blur' }
+                    ]
+                }
+            }
+        },
+        methods: {
+            onSubmit() {
+                // 确认提交操作
+                this.$refs.form.validate((valid) => {
+                    if (valid) {
+                        this.$confirm('确认要提交表单吗?', '提示', {
+                            confirmButtonText: '确定',
+                            cancelButtonText: '取消',
+                            type: 'warning'
+                        }).then(() => {
+                            this.loading = true;
+                            this.actualSubmit();
+                        }).catch(() => {
+                            // 取消提交操作
+                            console.log('提交已取消');
+                        });
+
+                    } else {
+                        console.log('表单验证失败');
+                        return false;
+                    }
+                });
+            },
+            actualSubmit(){
+                let data = this.form;
+                axios({
+                    method: 'post',
+                    url: '/index/configuration',
+                    data: data
+                }).then(response => {
+                    this.loading = false;
+                    if(response.data.code === 1){
+                        this.$message({
+                            message: response.data.msg,
+                            type: 'success'
+                        });
+                    }else {
+                        this.$message({
+                            message: response.data.msg,
+                            type: 'error'
+                        });
+                    }
+                }).catch(error => {
+                    this.loading = false;
+                    this.$message({
+                        message: '操作失败',
+                        type: 'error'
+                    });
+                })
+            }
+        }
+    })
+</script>
+</html>
+
