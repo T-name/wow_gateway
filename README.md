@@ -27,6 +27,7 @@
         设置GM等级
 
 功能截图如下：
+
 ![1.png](img%2F1.png)
 ![2.png](img%2F2.png)
 ![3.png](img%2F3.png)
@@ -38,6 +39,7 @@
 ![9.png](img%2F9.png)
 
 具体的使用方法可以观看视频：
+
 服务注册地址：http://wow.t-name.cfd/mobile/
 
 更多功能正在更新，欢迎提出宝贵意见！！！
