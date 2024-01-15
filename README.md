@@ -40,7 +40,8 @@
 ![9.png](img%2F9.png)
 
 具体的使用方法可以观看视频：
-[1.mp4](img%2F1.mp4)
+
+<video src="https://raw.githubusercontent.com/T-name/wow_gateway/master/img/1.mp4"></video>
 
 服务注册地址：http://wow.t-name.cfd/mobile/
 
