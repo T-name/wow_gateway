@@ -27,6 +27,7 @@
         设置GM等级
 
 功能截图如下：
+
 ![1.png](..%2Fimg%2F1.png)
 ![2.png](..%2Fimg%2F2.png)
 ![3.png](..%2Fimg%2F3.png)
