@@ -12,9 +12,8 @@ echo 需要重新配置则请删除目录下的install.lock文件
 echo =====================================
 
 //设置环境变量
-set "PATH=P:\gateway_php_v2\php7.2.9nts;%PATH%"
-
-
+set "GATEWAY_DIR=%~dp0php7.2.9nts"
+set "PATH=%GATEWAY_DIR%;%PATH%"
 
 //启动网关
 if exist install.lock (
@@ -23,8 +22,7 @@ if exist install.lock (
     start http://localhost:9996/index/configuration
 )
 
-.\php7.2.9nts\php.exe .\server_v2\windows.php
-
+"%GATEWAY_DIR%\php.exe" ".\server_v2\windows.php"
 
 
 pause
