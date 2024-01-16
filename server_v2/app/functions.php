@@ -44,7 +44,7 @@ function calculateSRP6Verifier(string $username,string $password,string $salt): 
  * @param string $password
  * @return bool|string
  */
-function checkDbConnect(array $params = []) : bool|string
+function checkDbConnect(array $params = [])
 {
     try {
         new PDO("mysql:host={$params['hostname']};dbname={$params['database']};charset=utf8", $params['username'], $params['password'], [
