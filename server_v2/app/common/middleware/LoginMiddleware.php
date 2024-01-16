@@ -53,18 +53,20 @@ class LoginMiddleware implements MiddlewareInterface
                 }
             }
 
-            $ip = getenv('APP_IP');
-            if(!Cache::get($ip)){
-                $apiUrl = config('app.base_url')."/api/gateway/report?ip={$ip}";
-                $res = Http::get($apiUrl);
-                try {
-                    $res = json_decode($res,true);
-                    if($res['code'] !== 1){
-                        return JsonService::fail($res['msg']);
+            if($request->action !== 'configuration'){
+                $ip = getenv('APP_IP');
+                if(!Cache::get($ip)){
+                    $apiUrl = config('app.base_url')."/api/gateway/report?ip={$ip}";
+                    $res = Http::get($apiUrl);
+                    try {
+                        $res = json_decode($res,true);
+                        if($res['code'] !== 1){
+                            return JsonService::fail($res['msg']);
+                        }
+                        Cache::set($ip,true,86400);
+                    }catch (Exception $exception){
+                        return JsonService::fail($exception->getMessage());
                     }
-                    Cache::set($ip,true,86400);
-                }catch (Exception $exception){
-                    return JsonService::fail($exception->getMessage());
                 }
             }
         }

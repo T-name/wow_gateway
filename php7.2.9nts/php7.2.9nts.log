@@ -1,0 +1,96 @@
+[16-Jan-2024 13:33:55 Asia/Shanghai] PHP Warning:  stream_socket_server(): unable to connect to tcp://0.0.0.0:9996 (以一种访问权限不允许的方式做了一个访问套接字的尝试。
+) in P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php on line 2360
+[16-Jan-2024 13:33:55 Asia/Shanghai] PHP Fatal error:  Uncaught Exception: 以一种访问权限不允许的方式做了一个访问套接字的尝试。
+ in P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php:2362
+Stack trace:
+#0 P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php(1483): Workerman\Worker->listen()
+#1 P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php(1402): Workerman\Worker::forkWorkersForWindows()
+#2 P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php(560): Workerman\Worker::forkWorkers()
+#3 P:\gateway_php_v2\server_v2\vendor\workerman\webman-framework\src\support\App.php(131): Workerman\Worker::runAll()
+#4 P:\gateway_php_v2\server_v2\start.php(4): support\App::run()
+#5 {main}
+  thrown in P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php on line 2362
+[16-Jan-2024 13:33:56 Asia/Shanghai] PHP Warning:  stream_socket_server(): unable to connect to tcp://0.0.0.0:9996 (以一种访问权限不允许的方式做了一个访问套接字的尝试。
+) in P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php on line 2360
+[16-Jan-2024 13:33:56 Asia/Shanghai] PHP Fatal error:  Uncaught Exception: 以一种访问权限不允许的方式做了一个访问套接字的尝试。
+ in P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php:2362
+Stack trace:
+#0 P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php(1483): Workerman\Worker->listen()
+#1 P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php(1402): Workerman\Worker::forkWorkersForWindows()
+#2 P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php(560): Workerman\Worker::forkWorkers()
+#3 P:\gateway_php_v2\server_v2\vendor\workerman\webman-framework\src\support\App.php(131): Workerman\Worker::runAll()
+#4 P:\gateway_php_v2\server_v2\start.php(4): support\App::run()
+#5 {main}
+  thrown in P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php on line 2362
+[16-Jan-2024 13:33:57 Asia/Shanghai] PHP Warning:  stream_socket_server(): unable to connect to tcp://0.0.0.0:9996 (以一种访问权限不允许的方式做了一个访问套接字的尝试。
+) in P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php on line 2360
+[16-Jan-2024 13:33:57 Asia/Shanghai] PHP Fatal error:  Uncaught Exception: 以一种访问权限不允许的方式做了一个访问套接字的尝试。
+ in P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php:2362
+Stack trace:
+#0 P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php(1483): Workerman\Worker->listen()
+#1 P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php(1402): Workerman\Worker::forkWorkersForWindows()
+#2 P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php(560): Workerman\Worker::forkWorkers()
+#3 P:\gateway_php_v2\server_v2\vendor\workerman\webman-framework\src\support\App.php(131): Workerman\Worker::runAll()
+#4 P:\gateway_php_v2\server_v2\start.php(4): support\App::run()
+#5 {main}
+  thrown in P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php on line 2362
+[16-Jan-2024 13:33:58 Asia/Shanghai] PHP Warning:  stream_socket_server(): unable to connect to tcp://0.0.0.0:9996 (以一种访问权限不允许的方式做了一个访问套接字的尝试。
+) in P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php on line 2360
+[16-Jan-2024 13:33:58 Asia/Shanghai] PHP Fatal error:  Uncaught Exception: 以一种访问权限不允许的方式做了一个访问套接字的尝试。
+ in P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php:2362
+Stack trace:
+#0 P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php(1483): Workerman\Worker->listen()
+#1 P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php(1402): Workerman\Worker::forkWorkersForWindows()
+#2 P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php(560): Workerman\Worker::forkWorkers()
+#3 P:\gateway_php_v2\server_v2\vendor\workerman\webman-framework\src\support\App.php(131): Workerman\Worker::runAll()
+#4 P:\gateway_php_v2\server_v2\start.php(4): support\App::run()
+#5 {main}
+  thrown in P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php on line 2362
+[16-Jan-2024 13:34:00 Asia/Shanghai] PHP Warning:  stream_socket_server(): unable to connect to tcp://0.0.0.0:9996 (以一种访问权限不允许的方式做了一个访问套接字的尝试。
+) in P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php on line 2360
+[16-Jan-2024 13:34:00 Asia/Shanghai] PHP Fatal error:  Uncaught Exception: 以一种访问权限不允许的方式做了一个访问套接字的尝试。
+ in P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php:2362
+Stack trace:
+#0 P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php(1483): Workerman\Worker->listen()
+#1 P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php(1402): Workerman\Worker::forkWorkersForWindows()
+#2 P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php(560): Workerman\Worker::forkWorkers()
+#3 P:\gateway_php_v2\server_v2\vendor\workerman\webman-framework\src\support\App.php(131): Workerman\Worker::runAll()
+#4 P:\gateway_php_v2\server_v2\start.php(4): support\App::run()
+#5 {main}
+  thrown in P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php on line 2362
+[16-Jan-2024 13:34:01 Asia/Shanghai] PHP Warning:  stream_socket_server(): unable to connect to tcp://0.0.0.0:9996 (以一种访问权限不允许的方式做了一个访问套接字的尝试。
+) in P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php on line 2360
+[16-Jan-2024 13:34:01 Asia/Shanghai] PHP Fatal error:  Uncaught Exception: 以一种访问权限不允许的方式做了一个访问套接字的尝试。
+ in P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php:2362
+Stack trace:
+#0 P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php(1483): Workerman\Worker->listen()
+#1 P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php(1402): Workerman\Worker::forkWorkersForWindows()
+#2 P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php(560): Workerman\Worker::forkWorkers()
+#3 P:\gateway_php_v2\server_v2\vendor\workerman\webman-framework\src\support\App.php(131): Workerman\Worker::runAll()
+#4 P:\gateway_php_v2\server_v2\start.php(4): support\App::run()
+#5 {main}
+  thrown in P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php on line 2362
+[16-Jan-2024 13:34:02 Asia/Shanghai] PHP Warning:  stream_socket_server(): unable to connect to tcp://0.0.0.0:9996 (以一种访问权限不允许的方式做了一个访问套接字的尝试。
+) in P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php on line 2360
+[16-Jan-2024 13:34:02 Asia/Shanghai] PHP Fatal error:  Uncaught Exception: 以一种访问权限不允许的方式做了一个访问套接字的尝试。
+ in P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php:2362
+Stack trace:
+#0 P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php(1483): Workerman\Worker->listen()
+#1 P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php(1402): Workerman\Worker::forkWorkersForWindows()
+#2 P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php(560): Workerman\Worker::forkWorkers()
+#3 P:\gateway_php_v2\server_v2\vendor\workerman\webman-framework\src\support\App.php(131): Workerman\Worker::runAll()
+#4 P:\gateway_php_v2\server_v2\start.php(4): support\App::run()
+#5 {main}
+  thrown in P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php on line 2362
+[16-Jan-2024 13:34:03 Asia/Shanghai] PHP Warning:  stream_socket_server(): unable to connect to tcp://0.0.0.0:9996 (以一种访问权限不允许的方式做了一个访问套接字的尝试。
+) in P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php on line 2360
+[16-Jan-2024 13:34:03 Asia/Shanghai] PHP Fatal error:  Uncaught Exception: 以一种访问权限不允许的方式做了一个访问套接字的尝试。
+ in P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php:2362
+Stack trace:
+#0 P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php(1483): Workerman\Worker->listen()
+#1 P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php(1402): Workerman\Worker::forkWorkersForWindows()
+#2 P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php(560): Workerman\Worker::forkWorkers()
+#3 P:\gateway_php_v2\server_v2\vendor\workerman\webman-framework\src\support\App.php(131): Workerman\Worker::runAll()
+#4 P:\gateway_php_v2\server_v2\start.php(4): support\App::run()
+#5 {main}
+  thrown in P:\gateway_php_v2\server_v2\vendor\workerman\workerman\Worker.php on line 2362

@@ -54,7 +54,7 @@ class IndexController extends BaseApiController
             ];
            $connect =  checkDbConnect($auth);
            if($connect !== true){
-               return $this->fail("auth库连接失败 {$connect}");
+               return $this->fail("auth库连接失败 请检查连接信息是否正确");
            }
 
            $characters = [
@@ -75,7 +75,7 @@ class IndexController extends BaseApiController
             ];
             $connect =  checkDbConnect($characters);
             if($connect !== true){
-                return $this->fail("characters库连接失败 {$connect}");
+                return $this->fail("characters库连接失败 请检查连接信息是否正确");
             }
 
             $world = [
@@ -96,7 +96,7 @@ class IndexController extends BaseApiController
             ];
             $connect =  checkDbConnect($world);
             if($connect !== true){
-                return $this->fail("world库连接失败 {$connect}");
+                return $this->fail("world库连接失败 请检查连接信息是否正确");
             }
 
             //设置连接配置
